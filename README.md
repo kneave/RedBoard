@@ -294,11 +294,11 @@ Edit the rc.local file by typing the following in the terminal:
 
 Uncomment the following line by removing the `#`:
 
-`#sudo python3 /home/pi/RedBoard/system/system_monitor.py&`
+`#sudo python3 /home/ubuntu/RedBoard/system/system_monitor.py&`
 
 Then comment the following line by adding a `#` at the start:
 
-`sudo python3 /home/pi/RedBoard/system/reset_shutdown.py&`
+`sudo python3 /home/ubuntu/RedBoard/system/reset_shutdown.py&`
 
 Make sure only one of these line is uncommented.
 
@@ -359,7 +359,7 @@ Edit the rc.local file by typing the following in the terminal:
 Scroll to the bottom of the file and just above `exit 0` type `python3` then the full path to the program you want to run. 
 
 Here's an example, to run the `carsteer.py` program - type:
-`python3 /home/pi/RedBoard/carsteer.py&`
+`python3 /home/ubuntu/RedBoard/carsteer.py&`
 
 Make sure you put `&` at the end of the line. 
 
@@ -511,7 +511,7 @@ If you have the OLED screen attached, It's best to disable or disconnect it, as 
 
 Your Neopixel strip must be connected to pin 12 on the Redboard+
 To change the number of pixels you are using, edit the file:  
-/home/pi/RedBoard/neopixels.py  
+/home/ubuntu/RedBoard/neopixels.py  
 Change the value of LED_COUNT to match the number of pixels on your strip. 
 
 

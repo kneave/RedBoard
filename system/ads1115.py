@@ -50,7 +50,7 @@ voltage3 = readAdc_3()
 
 # Battery Voltage
 
-cmd = "python3 /home/pi/RedBoard/system/bat_check.py"    
+cmd = "python3 /home/ubuntu/RedBoard/system/bat_check.py"    
 bat = float(subprocess.check_output(cmd, shell = True ).decode())
 print ('Battery Voltage =',bat)
 

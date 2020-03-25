@@ -19,11 +19,11 @@ do
 done
 
 
-adc_Old=`python3 /home/pi/RedBoard/system/bat_check.py`
+adc_Old=`python3 /home/ubuntu/RedBoard/system/bat_check.py`
 
 echo Old Battery Measurement = $adc_Old
 
-adc=`python3 /home/pi/RedBoard/system/adc_conversion.py`
+adc=`python3 /home/ubuntu/RedBoard/system/adc_conversion.py`
 
 echo ADC reading = $adc
 num=$(python -c "print $adc/$battery")
@@ -31,11 +31,11 @@ num1=$(python -c "print round($num)")
 
 echo Calibration value = $num1
 
-sed -i "/Value =/c\ADC_bat_conversion_Value = ${num1}" /home/pi/RedBoard/system/bat_check.py
+sed -i "/Value =/c\ADC_bat_conversion_Value = ${num1}" /home/ubuntu/RedBoard/system/bat_check.py
 
 echo ADC calibrated successfully!
 echo
-adc2=`python3 /home/pi/RedBoard/system/bat_check.py`
+adc2=`python3 /home/ubuntu/RedBoard/system/bat_check.py`
 
 echo New battery measurement = $adc2
 echo

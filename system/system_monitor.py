@@ -52,7 +52,7 @@ except FileNotFoundError:
     print('')
 
     # Run the reset_shutdown program instead so the button still works     
-    os.system('sudo python3 /home/pi/RedBoard/system/reset_shutdown.py&')
+    os.system('sudo python3 /home/ubuntu/RedBoard/system/reset_shutdown.py&')
     exit()
 
 
@@ -72,7 +72,7 @@ def readAdc():
 
     
     try:
-        cmd = "python3 /home/pi/RedBoard/system/bat_check.py"    
+        cmd = "python3 /home/ubuntu/RedBoard/system/bat_check.py"    
         bat = float(subprocess.check_output(cmd, shell = True ).decode())      
         return bat
 
@@ -125,7 +125,7 @@ except IOError:
     print('')
 
     # Run the reset_shutdown program instead so the button still works     
-    os.system('sudo python3 /home/pi/RedBoard/system/reset_shutdown.py&')
+    os.system('sudo python3 /home/ubuntu/RedBoard/system/reset_shutdown.py&')
     exit()
 
 #Read the Battery Voltage 
@@ -161,7 +161,7 @@ elif volts_0 < 6:
     print('')
 
     # Run the reset_shutdown program instead so the button still works     
-    os.system('sudo python3 /home/pi/RedBoard/system/reset_shutdown.py&')
+    os.system('sudo python3 /home/ubuntu/RedBoard/system/reset_shutdown.py&')
     exit()
 
 bat_level()  # Show battery level on RGB Led 
@@ -273,7 +273,7 @@ while True:
           if buttonElaspedTime <1:
               ledOff()  
               print("Show IP")  
-              os.system('sudo python3 /home/pi/RedBoard/system/ip.py')  # Show IP address on LED 
+              os.system('sudo python3 /home/ubuntu/RedBoard/system/ip.py')  # Show IP address on LED 
               time.sleep(0.5)    
           
           if buttonElaspedTime >1 and buttonElaspedTime <4:

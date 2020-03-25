@@ -45,7 +45,7 @@ if grep -Fq "ip.py" "/etc/rc.local"
 then
     echo 
 else
-    sudo sed -i -e '$i #Show IP Address\nsudo python3 /home/pi/RedBoard/system/ip.py;\n\n\n ' /etc/rc.local
+    sudo sed -i -e '$i #Show IP Address\nsudo python3 /home/ubuntu/RedBoard/system/ip.py;\n\n\n ' /etc/rc.local
 fi
 
 
@@ -57,8 +57,8 @@ else
     sudo sed -i -e '$i ## Start system monitor (to measure battery level, currently only calibrated for 2s or 3s Lipo batteries)' /etc/rc.local
     sudo sed -i -e '$i ## or just the reset/shutdown button monitor. This is the default option.' /etc/rc.local
     sudo sed -i -e '$i ## Only run one of these two programs:\n' /etc/rc.local
-    sudo sed -i -e '$i sudo python3 /home/pi/RedBoard/system/reset_shutdown.py&' /etc/rc.local
-    sudo sed -i -e '$i #sudo python3 /home/pi/RedBoard/system/system_monitor.py&\n\n\n ' /etc/rc.local
+    sudo sed -i -e '$i sudo python3 /home/ubuntu/RedBoard/system/reset_shutdown.py&' /etc/rc.local
+    sudo sed -i -e '$i #sudo python3 /home/ubuntu/RedBoard/system/system_monitor.py&\n\n\n ' /etc/rc.local
 fi
 
 
@@ -70,7 +70,7 @@ else
     sudo apt-get install python3-pil
     sudo sed -i -e '$i ## Display IP address and battery voltage if' /etc/rc.local
     sudo sed -i -e '$i ## you have an PiOled (ssd1306) screen attached' /etc/rc.local
-    sudo sed -i -e '$i python3 /home/pi/RedBoard/ssd1306_stats.py&\n\n\n ' /etc/rc.local
+    sudo sed -i -e '$i python3 /home/ubuntu/RedBoard/ssd1306_stats.py&\n\n\n ' /etc/rc.local
 fi
 
 
@@ -80,7 +80,7 @@ then
 else
     sudo sed -i -e '$i ## Run your program at startup here - with the "&" symbol at the end.' /etc/rc.local
     sudo sed -i -e '$i ## Eg. uncomment the following line to run robot.py at startup' /etc/rc.local
-    sudo sed -i -e '$i #python3 /home/pi/RedBoard/robot.py&\n#' /etc/rc.local
+    sudo sed -i -e '$i #python3 /home/ubuntu/RedBoard/robot.py&\n#' /etc/rc.local
 fi
 
 echo

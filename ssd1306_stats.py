@@ -75,7 +75,7 @@ x = 0
 
 # Load default font.
 #font = ImageFont.load_default()
-font = ImageFont.truetype('/home/pi/RedBoard/system/Greenscr.ttf', 12)
+font = ImageFont.truetype('/home/ubuntu/RedBoard/system/Greenscr.ttf', 12)
 
 # Alternatively load a TTF font.  Make sure the .ttf font file is in the
 # same directory as the python script!
@@ -91,7 +91,7 @@ while True:
         cmd = "hostname -I | cut -d\' \' -f1"
         IP = subprocess.check_output(cmd, shell=True).decode("utf-8")
 
-        cmd = "python3 /home/pi/RedBoard/system/bat_check.py"    
+        cmd = "python3 /home/ubuntu/RedBoard/system/bat_check.py"    
         bat = subprocess.check_output(cmd, shell = True ).decode()
         #print (bat)
 
